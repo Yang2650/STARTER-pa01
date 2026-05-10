@@ -28,5 +28,8 @@ card_list.o: card_list.cpp card_list.h
 card.o: card.cpp card.h
 	${CXX} ${CXXFLAGS} card.cpp -c
 
+tests: tests.cpp card.o card_list.o
+	g++ -g -std=c++20 -Wall tests.cpp card.o card_list.o -o tests
+
 clean:
 	rm game_set game *.o
