@@ -54,7 +54,7 @@ int main(int argc, char** argv){
       }
     }
     // Bob
-    for (auto it = B.rbegin(); it != B.rend(); --it) {
+    for (auto it = B.rbegin(); it != B.rend(); ++it) {
       if (A.find(*it) != A.end()) {
         auto del = *it;
         cout << "Bob picked matching card " << del.suit << " " << del.value << endl;
